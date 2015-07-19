@@ -1,3 +1,5 @@
 # PullLoadView
-pull to refresh and load more recyclerview
-read me
+pull to refresh and loadMore recyclerView
+
+# Thanks
+vinaysshenoy/mugen https://github.com/vinaysshenoy/mugen
