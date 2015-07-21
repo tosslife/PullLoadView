@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="pullloadview-1.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/simple/build/intermediates/exploded-aar/com.github.tosslife/pullloadview/1.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/simple/build/intermediates/exploded-aar/com.github.tosslife/pullloadview/1.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
