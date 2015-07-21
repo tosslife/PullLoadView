@@ -81,7 +81,7 @@ To set some basic settings use the following java-code:
 
   The MIT License (MIT)
 
-  Copyright (c) 2015 LingoChamp Inc.
+  Copyright (c) 2015 sanrenx Inc.
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
