@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
@@ -68,13 +67,11 @@ public class PullToLoadView extends FrameLayout {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                Log.e("pull to load view", "on scrolled " + dx + "--" + dy);
                 if (mCurScrollingDirection == null) { //User has just started a scrolling motion
                     mCurScrollingDirection = ScrollDirection.SAME;
                     mPrevFirstVisibleItem = mRecyclerViewHelper.findFirstVisibleItemPosition();
                 } else {
                     final int firstVisibleItem = mRecyclerViewHelper.findFirstVisibleItemPosition();
-                    Log.e("pull to load view", "firstVisibleItem " + firstVisibleItem);
                     if (firstVisibleItem > mPrevFirstVisibleItem) {
                         //User is scrolling up
                         mCurScrollingDirection = ScrollDirection.UP;
@@ -88,7 +85,6 @@ public class PullToLoadView extends FrameLayout {
                 }
 
 
-                Log.e("pull to load view ", "mCurScrollingDirection-----" + mCurScrollingDirection.toString() + "-------PrevFirstVisibleItem:" + mPrevFirstVisibleItem);
                 if (mIsLoadMoreEnabled && (mCurScrollingDirection == ScrollDirection.UP)) {
                     //We only need to paginate if user scrolling near the end of the list
                     if (!mPullCallback.isLoading() && !mPullCallback.hasLoadedAllItems()) {
@@ -106,9 +102,6 @@ public class PullToLoadView extends FrameLayout {
                         }
                     }
                 }
-                Log.e("pull to load view", "isLoading:  " + mPullCallback.isLoading());
-                Log.e("pull to load view", "hasLoadedAllItems:  " + mPullCallback.hasLoadedAllItems());
-                Log.e("pull to load view", "isLoadMoreEnabled " + mIsLoadMoreEnabled);
             }
         });
     }
@@ -128,6 +121,10 @@ public class PullToLoadView extends FrameLayout {
             });
             mPullCallback.onRefresh();
         }
+    }
+
+    public void setColorSchemeResources(int... colorResIds) {
+        mSwipeRefreshLayout.setColorSchemeResources(colorResIds);
     }
 
     public RecyclerView getRecyclerView() {
