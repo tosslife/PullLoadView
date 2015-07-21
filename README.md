@@ -6,19 +6,23 @@ pull to refresh and loadMore recyclerView
 -------------------------
 ![screenshot](https://github.com/tosslife/PullLoadView/blob/master/simple.gif)
 
-### Gradle
--------------------------
-build.gradle:
-```groovy
-compile 'com.github.tosslife:pullloadview:1.0.2'
-```
+
 
 # How to use (参考MainActivity)
 -------------------------
 
-### Xml
-After adding the gradle dependencies from above you can go to your xml layout and add the following code for a PullToLoadView:
+### Gradle
 
+add in build.gradle:
+
+```groovy
+
+compile 'com.github.tosslife:pullloadview:1.0.2'
+
+```
+### Xml
+
+After adding the gradle dependencies from above you can go to your xml layout and add the following code for a PullToLoadView:
 
 ```
    <com.srx.widget.PullToLoadView
@@ -28,7 +32,9 @@ After adding the gradle dependencies from above you can go to your xml layout an
 ```
 
 ### Java
+
 To set some basic settings use the following java-code:
+
 ```
        //获取RecyclerView
        RecyclerView mRecyclerView = mPullToLoadView.getRecyclerView();
