@@ -19,16 +19,17 @@ compile 'com.github.tosslife:pullloadview:1.0.2'
 ### Xml
 After adding the gradle dependencies from above you can go to your xml layout and add the following code for a PullToLoadView:
 
- <com.srx.widget.PullToLoadView
-           android:id="@+id/pullToLoadView"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
 
-
+```
+   <com.srx.widget.PullToLoadView
+             android:id="@+id/pullToLoadView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+```
 
 ### Java
 To set some basic settings use the following java-code:
-
+```
        //获取RecyclerView
        RecyclerView mRecyclerView = mPullToLoadView.getRecyclerView();
 
@@ -62,7 +63,7 @@ To set some basic settings use the following java-code:
 
        //初始加载
        mPullToLoadView.initLoad();
-
+```
 
 ### Thanks
 -------------------------
